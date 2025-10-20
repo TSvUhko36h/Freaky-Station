@@ -22,7 +22,7 @@
   id: TypanDraconicMunitions
   name: research-technology-draconic-munitions
   icon:
-    sprite: _Mini/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     state: incendiarydisplay
   discipline: TypanWeaponry
   tier: 1
@@ -173,7 +173,7 @@
   id: TypanEdgedWeapons
   name: research-technology-edged-weapons
   icon:
-    sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi
+    sprite: _Goobstation/Clothing/Hands/Gloves/knuckleduster.rsi
     state: syndicateknuckleduster
   discipline: TypanWeaponry
   tier: 1
@@ -246,7 +246,7 @@
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunDusterCircuitboard
-     # Goobstation R&D Console rework start
+  # Goobstation R&D Console rework start
   position: 0,-8
   technologyPrerequisites:
   - TypanSalvageWeapons
@@ -255,9 +255,9 @@
 
 - type: technology
   id: TypanNightVisionTechnology
-  name: research-technology-night-vision-technology
+  name: Технологии ночного видения
   icon:
-    sprite: _Mini/Clothing/Eyes/Hud/pnv-synd.rsi
+    sprite: _White/Clothing/Eyes/Goggles/snightvision.rsi
     state: icon
   discipline: TypanWeaponry
   tier: 2
@@ -348,7 +348,7 @@
   id: TypanAssaultRifles
   name: research-technology-assault-rifles
   icon:
-    sprite: _ADT/Objects/Weapons/Guns/Rifels/xc67.rsi
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
     state: icon
   discipline: TypanWeaponry
   tier: 2
@@ -392,11 +392,11 @@
   recipeUnlocks:
   - HolyHandGrenade
   - WhiteholeGrenade
-  - TypanBasicShuttleArmament
   # Goobstation R&D Console rework start
   position: 0,-8
   technologyPrerequisites:
   - TypanGrenades
+  - TypanBasicShuttleArmament
   # Goobstation R&D Console rework end
 
 - type: technology

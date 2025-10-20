@@ -69,7 +69,7 @@
   recipeUnlocks:
   - FlatpackerMachineCircuitboard
   # Goobstation R&D Console rework start
-  position: 0,-4
+  position: 0,2
   technologyPrerequisites:
   - SpaceScanning
   # Goobstation R&D Console rework end
@@ -89,7 +89,7 @@
   - CircuitImprinterHyperConvectionMachineCircuitboardTypan
   - SheetifierMachineCircuitboard
   # Goobstation R&D Console rework start
-  position: 0,-4
+  position: 0,3
   technologyPrerequisites:
   - SpaceScanning
   # Goobstation R&D Console rework end
@@ -253,7 +253,6 @@
   - MiningDrillDiamond
   - AdvancedMineralScannerEmpty
   - SalvageExpeditionsComputerCircuitboard
-  - BorgModuleAdvancedMining
   # Goobstation R&D Console rework start
   position: 0,-4
   technologyPrerequisites:

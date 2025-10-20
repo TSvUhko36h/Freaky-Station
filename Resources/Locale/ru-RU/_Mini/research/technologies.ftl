@@ -26,7 +26,6 @@ research-technology-emag = Устройства взлома
 research-technology-advanced-hypospray = Продвинутое впрыскивание химикатов
 research-technology-basic-hypospray = Впрыскивание химикатов
 research-technology-hypopen = Скрытное впрыскивание химикатов
-research-technology-cloning = Клонирование персонала
 research-technology-biofabrication = Биофабрикация
 research-technology-bloodred-ripley = Кроваво-красный Рипли
 research-technology-chameleon-projector = Технологии скрытности

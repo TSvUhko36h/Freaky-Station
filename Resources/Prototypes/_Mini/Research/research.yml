@@ -87,7 +87,7 @@
   recipeUnlocks:
   - EnergyDagger
    # Goobstation R&D Console rework start
-  position: 0,-1
+  position: 0,5
   # technologyPrerequisites:
   # - SpaceScanning
   # Goobstation R&D Console rework end
@@ -106,7 +106,7 @@
   recipeUnlocks:
   - ArtifactCrusherMachineCircuitboard
    # Goobstation R&D Console rework start
-  position: 0,-2
+  position: 0,6
   # technologyPrerequisites:
   # - SpaceScanning
   # Goobstation R&D Console rework end
