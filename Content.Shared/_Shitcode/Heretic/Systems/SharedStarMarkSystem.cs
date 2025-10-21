@@ -245,4 +245,12 @@ public abstract class SharedStarMarkSystem : EntitySystem
         modifier.IsActive = true;
         Dirty(field.Owner, modifier);
     }
+
+    private void RegenerateContacts(Entity<PhysicsComponent?, FixturesComponent?, TransformComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp1, ref ent.Comp2, ref ent.Comp3, false))
+            return;
+
+        _broadphase.RegenerateContacts(ent);
+    }
 }
