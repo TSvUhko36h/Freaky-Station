@@ -4,4 +4,4 @@ game-ticker-get-ingame-info-text =
     Сейчас играет [color=white]{ $playerCount }[/color] человек
     Карта: [color=white]{ $mapName }[/color]
     Режим: [color=white]{ $gmTitle }[/color]
-       [color=yellow]{ $desc }[/color]
+    >[color=yellow]{ $desc }[/color]

@@ -14,7 +14,7 @@ game-ticker-get-info-text =
     Сейчас играет [color=white]{ $playerCount }[/color] человек
     Карта: [color=white]{ $mapName }[/color]
     Режим: [color=white]{ $gmTitle }[/color]
-        [color=yellow]{ $desc }[/color]
+    >[color=yellow]{ $desc }[/color]
 game-ticker-get-info-preround-text =
     [color=gold]Ждём тебя на Мини-станции![/color]
     Сейчас [color=white]{ $roundId }[/color] раунд
@@ -24,7 +24,7 @@ game-ticker-get-info-preround-text =
     })
     Карта: [color=white]{ $mapName }[/color]
     Режим: [color=white]{ $gmTitle }[/color]
-        [color=yellow]{ $desc }[/color]
+    >[color=yellow]{ $desc }[/color]
 game-ticker-no-map-selected = [color=red]Карта ещё не выбрана![/color]
 game-ticker-player-no-jobs-available-when-joining = При попытке присоединиться к игре ни одной роли не было доступно.
 # Displayed in chat to admins when a player joins
