@@ -42,8 +42,8 @@ internal sealed class ClientSponsorManager : ISharedSponsorsManager, ISponsorUpd
 
     public bool TryGetServerPrototypes(NetUserId userId, [NotNullWhen(true)] out List<string>? prototypes)
     {
-        prototypes = new List<string>();
-        return false;
+        prototypes = new List<string>(); //freak
+        return false; //freak
     }
 
     public bool TryGetServerOocColor(NetUserId userId, [NotNullWhen(true)] out Color? color)
