@@ -672,7 +672,19 @@
       ]
     },
     {
-      "name": "eng",
+      "name": "sexborg",
+      "directions": 4
+    },
+    {
+      "name": "sexborg_e",
+      "directions": 4
+    },
+    {
+      "name": "sexborg_e_r",
+      "directions": 4
+    },
+    {
+      "name": "sexborg_l",
       "directions": 4
     }
   ]
