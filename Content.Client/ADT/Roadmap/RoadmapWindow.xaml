@@ -14,15 +14,15 @@
                 </BoxContainer>
             </BoxContainer>
             <BoxContainer Name="Columns" Access="Public" Orientation="Horizontal">
-                <BoxContainer Name="FirstVersion" Access="Public" Orientation="Vertical" Margin="0 0 20 0">
+                <BoxContainer Name="FirstVersion" Access="Public" HorizontalExpand="True"  Orientation="Vertical" Margin="0 0 20 0">
                     <controls:RoadmapVersionHeader Text="Текущая версия" />
                     <controls:RoadmapItem ItemState="InProgress" HeaderText="Тайпан" Text="Сверхсекретная станция синдиката со своим уникальным НИО, майнерами телекристаллов и ксенолабораторией!" />
                     <controls:RoadmapItem ItemState="Complete" HeaderText="Ребаланс аплинка" Text="Синтез предметов Goob Station и авторского баланса Мини-станции!" />
                 </BoxContainer>
-                <BoxContainer Name="SecondVersion" Access="Public" Orientation="Vertical" Margin="0 0 20 0">
+                <BoxContainer Name="SecondVersion" Access="Public" Orientation="Vertical" HorizontalExpand="True" Margin="0 0 20 0">
                     <controls:RoadmapVersionHeader Text="Предстоящее" />
                 </BoxContainer>
-                <BoxContainer Name="ThirdVersion" Access="Public" Orientation="Vertical" Margin="0 0 20 0">
+                <BoxContainer Name="ThirdVersion" Access="Public" HorizontalExpand="True" Orientation="Vertical" Margin="0 0 20 0">
                     <controls:RoadmapVersionHeader Text="На будущее" />
                 </BoxContainer>
             </BoxContainer>
