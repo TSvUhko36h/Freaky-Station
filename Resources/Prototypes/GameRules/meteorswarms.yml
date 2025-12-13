@@ -337,8 +337,8 @@
     weight: 2 # Freaky Station
     reoccurrenceDelay: 1
     duration: 30 # CorvaxGoob-CustomAnnouncers
-    earliestStart: 10 # Freaky Station
-    minimumPlayers: 4 # Freaky Station
+    earliestStart: 60 # Freaky Station
+    minimumPlayers: 8 # Freaky Station
     chaos: # Goobstation
       Power: 100
       Atmos: 100
