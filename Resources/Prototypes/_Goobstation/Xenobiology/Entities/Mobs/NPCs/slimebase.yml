@@ -3,7 +3,7 @@
   parent: [ SimpleMobBase, MobCombat ]
   id: BaseMobSlimeXenobio
   name: слайм
-  description: It looks so much like jelly. I wonder what it tastes like?
+  description: Выглядит прямо как желе. Интересно, какое оно на вкус?
   components:
   - type: Appearance
   - type: Hunger
@@ -149,7 +149,7 @@
   categories: [ HideSpawnMenu ]
   name: слайм
   suffix: Baby
-  description: It looks so much like jelly. I wonder what it tastes like?
+  description: Выглядит прямо как желе. Интересно, какое оно на вкус?
   components:
   - type: Sprite
     drawdepth: Mobs
