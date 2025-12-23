@@ -16,7 +16,7 @@
 - type: species
   id: Rodentia
   name: species-name-rodentia
-  roundStart: true # CorvaxGoob Temporary hidden
+  roundStart: true # CorvaxGoob Temporary hidden, freaky station change to true
   prototype: MobRodentia
   sprites: MobRodentiaSprites
   defaultSkinTone: "#747474"

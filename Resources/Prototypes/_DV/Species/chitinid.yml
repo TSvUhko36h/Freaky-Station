@@ -1,7 +1,7 @@
 - type: species
   id: Chitinid
   name: species-name-chitinid
-  roundStart: true # CorvaxGoob : Temporary hidden
+  roundStart: true # CorvaxGoob Temporary hidden, freaky station change to true
   prototype: MobChitinid
   sprites: MobChitinidSprites
   defaultSkinTone: "#ffda93"

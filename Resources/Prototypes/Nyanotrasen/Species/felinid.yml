@@ -21,7 +21,7 @@
 - type: species
   id: Felinid
   name: species-name-felinid
-  roundStart: true # Goobstation change
+  roundStart: true # Goobstation change to false, freaky station change to true
   prototype: MobFelinid
   sprites: MobHumanSprites
   markingLimits: MobFelinidMarkingLimits
