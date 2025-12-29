@@ -34,8 +34,8 @@
   
 - type: customGhost
   id: TipuganGhost
-  ckey: Casha
-  sprite: /Textures/_FreakStation/Ghost/Booster/Tipugan.rsi
+  ckey: Tipugan
+  sprite: /Textures/_FreakStation/Ghost/Booster/tipugan.rsi
   scale: 0.5
   alpha: 0.8
   ghostName: BlackCat
