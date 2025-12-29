@@ -393,7 +393,6 @@ namespace Content.Server.Database
 
                 loadouts[role.RoleName] = loadout;
             }
-
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
@@ -417,7 +416,8 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                Enum.TryParse<ERPS>(profile.ERPS, out var erpVal) ? erpVal : ERPS.No
             );
         }
 
@@ -447,6 +447,7 @@ namespace Content.Server.Database
             profile.SkinColor = appearance.SkinColor.ToHex();
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
+            profile.ERPS = humanoid.ERPS.ToString();
             profile.Slot = slot;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
 

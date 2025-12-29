@@ -359,6 +359,16 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Sex
+            #region Erp
+
+            ERPEnabledButton.OnItemSelected += args =>
+            {
+                ERPEnabledButton.SelectId(args.Id);
+                SetErp((ERPS) args.Id);
+            };
+
+
+            #endregion Erp
 
             #region Age
 
@@ -1042,9 +1052,10 @@ namespace Content.Client.Lobby.UI
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
+            UpdateErpControls();
             // UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
             // UpdateWeight(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-
+            UpdateErpControls();
             RefreshAntags();
             RefreshJobs();
             RefreshLoadouts();
@@ -1507,7 +1518,11 @@ namespace Content.Client.Lobby.UI
             Markings.SetSex(newSex);
             ReloadPreview();
         }
-
+        private void SetErp(ERPS newERP)
+        {
+            Profile = Profile?.WithERP(newERP);
+            SetDirty();
+        }
         private void SetGender(Gender newGender)
         {
             Profile = Profile?.WithGender(newGender);
@@ -1650,6 +1665,29 @@ namespace Content.Client.Lobby.UI
                 SexButton.SelectId((int) Profile.Sex);
             else
                 SexButton.SelectId((int) sexes[0]);
+        }
+        private void UpdateErpControls()
+        {
+            if (Profile == null)
+                return;
+
+            ERPEnabledButton.Clear();
+
+            var erps = new List<ERPS>
+            {
+                ERPS.Yes,
+
+                ERPS.No
+            };
+            foreach (var sex in erps)
+            {
+                ERPEnabledButton.AddItem(Loc.GetString($"humanoid-profile-editor-erp-{sex.ToString().ToLower()}-text"), (int) sex);
+            }
+
+            if (erps.Contains(Profile.ERPS))
+                ERPEnabledButton.SelectId((int) Profile.ERPS);
+            else
+                ERPEnabledButton.SelectId((int) erps[1]);
         }
 
         private void UpdateSkinColor()
