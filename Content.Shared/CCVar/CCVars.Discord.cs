@@ -81,6 +81,13 @@ public sealed partial class CCVars
         CVarDef.Create("discord.watchlist_connection_buffer_time", 5f, CVar.SERVERONLY);
 
     /// <summary>
+    ///     Reserve - ADT port
+    ///     URL of the Discord adminchat info to the channel.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordAdminchatWebhook =
+        CVarDef.Create("discord.adminchat_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL | CVar.ARCHIVE);
+
+    /// <summary>
     ///     URL of the Discord webhook which will receive station news acticles at the round end.
     ///     If left empty, disables the webhook.
     /// </summary>

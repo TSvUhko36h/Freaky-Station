@@ -198,6 +198,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Content.Server.Discord;
 // using Content.Server._RMC14.LinkAccount; // RMC - Patreon // CorvaxGoob-Coins
 // using Content.Server._RMC14.LinkAccount; CorvaxGoob-Coins
 using Content.Corvax.Interfaces.Shared; // RMC - Patreon
@@ -227,6 +228,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
+    [Dependency] private readonly DiscordWebhook _discord = default!;
     private ISharedSponsorsManager? _sponsorsManager; // CorvaxGoob-Sponsors
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     //[Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon // CorvaxGoob-Coins
@@ -480,7 +482,7 @@ internal sealed partial class ChatManager : IChatManager
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"OOC from {player:Player}: {message}");
     }
 
-    private void SendAdminChat(ICommonSession player, string message)
+    private async void SendAdminChat(ICommonSession player, string message)
     {
         if (!_adminManager.IsAdmin(player))
         {
@@ -508,6 +510,27 @@ internal sealed partial class ChatManager : IChatManager
         }
 
         _adminLogger.Add(LogType.Chat, $"Admin chat from {player:Player}: {message}");
+        // ADT-Tweak-start: Постит в дис весь админчат, если есть данный вебхук
+        if (!string.IsNullOrEmpty(_configurationManager.GetCVar(CCVars.DiscordAdminchatWebhook)))
+        {
+            var webhookUrl = _configurationManager.GetCVar(CCVars.DiscordAdminchatWebhook);
+
+            if (webhookUrl == null)
+                return;
+
+            if (await _discord.GetWebhook(webhookUrl) is not { } webhookData)
+                return;
+
+            var senderAdmin = _adminManager.GetAdminData(player);
+
+            var payload = new WebhookPayload
+            {
+                Content = $"{player.Name} [{(senderAdmin?.Title ?? "Admin")}]:\n{message}" //Reserve edit
+            };
+            var identifier = webhookData.ToIdentifier();
+            await _discord.CreateMessage(identifier, payload);
+        }
+        // ADT-Tweak-end
     }
 
     #endregion
