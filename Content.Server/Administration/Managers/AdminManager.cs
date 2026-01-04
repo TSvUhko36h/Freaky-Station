@@ -432,7 +432,7 @@ namespace Content.Server.Administration.Managers
                     return;
                 var payload = new WebhookPayload
                 {
-                    Content = $"Администратор **вышел**: {senderName}"
+                    Content = $"Фрик **вышел**: {senderName}"
                 };
                 var identifier = webhookData.ToIdentifier();
                 await _discord.CreateMessage(identifier, payload);
@@ -491,7 +491,7 @@ namespace Content.Server.Administration.Managers
                                 return;
                             var payload = new WebhookPayload
                             {
-                                Content = $"Администратор **зашёл**: {senderName}"
+                                Content = $"Фрик **зашёл**: {senderName}"
                             };
                             var identifier = webhookData.ToIdentifier();
                             await _discord.CreateMessage(identifier, payload);
