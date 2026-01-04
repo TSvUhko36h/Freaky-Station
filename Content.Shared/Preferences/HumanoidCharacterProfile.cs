@@ -767,7 +767,7 @@ namespace Content.Shared.Preferences
                     toRemove.Add(roleName);
                     continue;
                 }
-
+                loadouts.Role = roleName;
                 loadouts.EnsureValid(this, session, collection);
             }
 
