@@ -4,7 +4,7 @@
                xmlns:style="clr-namespace:Content.Client.Stylesheets"
                Title="ЕРП действия" SetWidth="500" MinWidth="500" SetHeight="800" MaxHeight="800" MinHeight="800" Resizable="false">
     <BoxContainer Name="BasedContainer" Orientation="Vertical" HorizontalExpand="True">
-            <TextureRect SetSize="500 48" Stretch="KeepAspectCentered" HorizontalAlignment="Left" TexturePath="/Textures/Casha/ERPicon/erproza.png"/> 
+            <TextureRect SetSize="500 48" Stretch="KeepAspectCentered" HorizontalAlignment="Left" TexturePath="/Textures/_FreakStation/Casha/ERPicon/erproza.png"/> 
         <BoxContainer Orientation="Horizontal" MaxHeight="200" VerticalAlignment="Top">
             <BoxContainer Name="UserDescription" Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Left" Margin="10" MinWidth="0">
             </BoxContainer>
