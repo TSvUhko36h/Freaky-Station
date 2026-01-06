@@ -37,7 +37,7 @@ namespace Content.Server.ERP
         {
             if (component.Erp)
             {
-                args.PushMarkup("[color=#ff85ff][bold]ERP статус — ВКЛЮЧЕНО.[/color][/bold]");
+                args.PushMarkup("[color=#FF1488][bold]ERP статус — ВКЛЮЧЕНО.[/color][/bold]"); //klyanus slychayno takoy hex postavil
             }
         }
         private void OnPlayerSpawned(PlayerSpawnCompleteEvent ev)
@@ -101,7 +101,7 @@ namespace Content.Server.ERP
                 {
                     Priority = -1,
                     Text = "ЕРП",
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/Casha/ERPicon/erp.svg.192dpi.png")),
+                    Icon = new SpriteSpecifier.Texture(new("/Textures/_FreakStation/Casha/ERPicon/erp.svg.192dpi.png")),
                     Act = () =>
                     {
                         if (!args.CanInteract || !args.CanAccess) return;
