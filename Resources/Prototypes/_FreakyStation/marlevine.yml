@@ -1,8 +1,8 @@
 - type: reagent
   id: Marlevine
-  name: марлевин
+  name: reagent-name-marlevine
   group: Medicine
-  desc: марлевин
+  desc: reagent-desc-marlevine
   physicalDesc: reagent-physical-desc-fizzy
   flavor: medicine
   color: "#f80000"
@@ -13,7 +13,7 @@
         amount: -1.9
       - !type:SuppressPain
         amount: 1
-        time: 30 
+        time: 30
       - !type:AdjustPainFeels
         conditions:
         - !type:ReagentThreshold
@@ -22,10 +22,10 @@
       - !type:HealthChange
         damage:
           groups:
-            Brute: -18 
+            Brute: -18
       - !type:HealthChange
         conditions:
-        - !type:OrganType 
+        - !type:OrganType
           type: Yowie
           shouldHave: false
         - !type:ReagentThreshold
@@ -36,7 +36,7 @@
             Poison: 2
       - !type:ChemVomit
         conditions:
-        - !type:OrganType 
+        - !type:OrganType
           type: Yowie
           shouldHave: false
         - !type:ReagentThreshold
