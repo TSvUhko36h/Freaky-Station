@@ -14,14 +14,6 @@
   ghostName: Casha
   ghostDescription: Допиваю свой бокал и снова в жизни ищу толк
 
-# - type: customGhost #понижен до бустера тип
-  # id: kef1rOOGhost
-  # ckey: kef1r00
-  # sprite: /Textures/_FreakStation/Ghost/GhostWhite.rsi
-  # alpha: 0.8
-  # ghostName: kef1r00
-  # ghostDescription: "я не придумал"
-
 # - type: customGhost # мне не нравится крч
   # id: ANIvarmGhost
   # ckey: ANIvarm
